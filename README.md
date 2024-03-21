@@ -1,4 +1,5 @@
-# estudo-ionic
+# crud-login-register-ionic
 
-Projeto ionic que consiste em 5 componentes onde temos uma tela de login com autenticação e 4 telas com crud completo,
-o projeto consomente uma api nodejs
+Ionic project that consists of 5 components where we have a login screen with authentication and 4 screens with complete crud, 
+the project consumes a nodejs api
+
