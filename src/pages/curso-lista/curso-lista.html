@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de Cursos </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let curso of curso">
+          <ion-item>
+              <p>Curso: {{curso.nome}} </p>
+              <p>Data: {{curso.data}}</p>
+              <p>Periodo: {{curso.perido}}</p>
+          </ion-item>
+          <ion-item-options>
+              <button danger (click)="removeCurso(curso._id)">
+                  <ion-icon name="trash"></ion-icon>
+                  Remove
+              </button>
+              <button danger (click)="atualizaCurso(curso)">
+                  <ion-icon name="open"></ion-icon>
+                  Atualiza
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+  <button ion-button block (click)="chamaInsere()">
+    Novo Curso
+  </button>
+</ion-content>

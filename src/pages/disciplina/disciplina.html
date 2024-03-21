@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Cadastro de disciplina </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="disciplina.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button (click)="insere(disciplina)"> Criar </button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

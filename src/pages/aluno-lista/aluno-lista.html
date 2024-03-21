@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de alunos </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let aluno of alunos">
+          <ion-item>
+              <p>Ra: {{aluno.ra}} </p>
+              <p>Aluno: {{aluno.nome}}</p>
+              <p>Endreço: {{aluno.endereco}}</p>
+              <p>Rg: {{aluno.rg}}</p>
+          </ion-item>
+          <ion-item-options>
+              <button danger (click)="removeAluno(aluno._id)">
+                  <ion-icon name="trash"></ion-icon> 
+                  Remove
+              </button>
+              <button danger (click)="atualizaAluno(aluno._id)">
+                  <ion-icon name="open"></ion-icon> 
+                  Atualiza
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+  <button ion-button block (click)="chamaInsere()"> 
+    Novo aluno 
+  </button>
+</ion-content>

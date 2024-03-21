@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista de disciplinas </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let disciplina of disciplina">
+          <ion-item>
+              <p>Curso: {{disciplina.nome}} </p>
+              <p>Data: {{disciplina.data}}</p>
+          </ion-item>
+          <ion-item-options>
+              <button danger (click)="removeDisciplina(disciplina._id)">
+                  <ion-icon name="trash"></ion-icon>
+                  Remove
+              </button>
+              <button danger (click)="atualizaDisciplina(disciplina)">
+                  <ion-icon name="open"></ion-icon>
+                  Atualiza
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+  <button ion-button block (click)="chamaInsere()">
+    Nova Disciplina
+  </button>
+</ion-content>

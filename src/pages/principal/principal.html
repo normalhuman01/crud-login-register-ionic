@@ -1,0 +1,43 @@
+<ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="openPage(PrincipalPage)">
+          Home
+        </button>
+        <button ion-item (click)="abreAluno()">
+          Alunos
+        </button>
+        <button ion-item (click)="abreCurso()">
+          Cursos
+        </button>
+        <button ion-item (click)="abreDisciplina()">
+          Disciplinas
+        </button>
+        <button ion-item (click)="sair()">
+          Desconetar
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Menus
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <h2 align="center"> Sistema Acadêmico </h2>
+    <h3 align="center"> Faculdade de Tecnologia de Franca </h3>
+  </ion-content>

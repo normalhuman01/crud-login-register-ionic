@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Cadastro de Cursos </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="curso.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Periodo</ion-label>
+      <ion-input type="text" [(ngModel)]="curso.perido" name="perido" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button (click)="insere(curso)"> Criar </button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

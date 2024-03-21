@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Cadastro de Aluno </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>RA </ion-label>
+      <ion-input type="number" [(ngModel)]="aluno.ra" name="ra"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Endereço</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.endereco" name="endereco" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>RG</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.rg" name="rg" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button (click)="insere(aluno)"> Criar </button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
